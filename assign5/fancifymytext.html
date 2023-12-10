@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Fancify Shamcify</title>
+<head>
+    <title>Fancify Shamcify</title>
+    <script type="text/javascript" src="fancifymytext.js"></script>
+</head>
 
-		<!-- link to your script file here -->
-        <script src="fancifymytext.js" defer></script>
-		
-	</head>
+<body>
+    <h1>Fancify my Text</h1>
 
-	<body>
-		<h1>Fancify my Text</h1>
+    <!-- Text field -->
+    <fieldset>
+        <legend>Text</legend>
+        <textarea id="textInput" rows="4" cols="30"></textarea>
+    </fieldset>
 
-        <!-- Text Field -->
-        <fieldset>
-            <legend>Text</legend>
-            <textarea id="textInput" rows="4" cols="30" placeholder="Enter text here"></textarea>
-        </fieldset>
-		
-        <!-- Fancify Field -->
-        <fieldset>
-            <legend>Fancify</legend>
-            <button id="biggerButton">Bigger!</button>
-            <label>
-                <input type="radio" name="fancifyType" value="fancy" checked> FancyShmancy
-            </label>
-            <label>
-                <input type="radio" name="fancifyType" value="boring"> BoringBetty
-            </label>
-        </fieldset>
+    <!-- Fancify controls -->
+    <fieldset>
+        <legend>Fancify</legend>
+        <button onclick="biggerText()">Bigger!</button>
+        <br>
+        <input type="radio" id="fancyRadio" name="styleRadio" onchange="changeStyle()"> FancyShmancy
+        <input type="radio" id="boringRadio" name="styleRadio" onchange="changeStyle()"> BoringBetty
+    </fieldset>
 
-		<!-- Your UI controls go here -->
-		
-	</body>
+    <!-- Moo button -->
+    <button onclick="mooifyText()">Moo</button>
+
+</body>
 </html>
